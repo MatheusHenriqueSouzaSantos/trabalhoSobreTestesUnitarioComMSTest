@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using umfgcloud.infraestrutura.service.Classes;
 using umfgcloud.loja.dominio.service.DTO;
+using static umfgcloud.loja.dominio.service.DTO.ProdutoDTO;
 
 namespace umfgcloud.aplicacao.service.testes.Classes
 {
@@ -184,6 +185,42 @@ namespace umfgcloud.aplicacao.service.testes.Classes
                 var produtos = await servico.ObterTodosAsync();
 
                 Assert.IsTrue(produtos.Count() > 0);
+            }
+            catch (Exception ex)
+            {
+                Assert.Fail(ex.Message);
+            }
+        }
+        [TestMethod]
+        [Owner(C_OWNER)]
+        [TestCategory(C_CATEGORY)]
+        public async Task ProdutoServico_AtualizarComIdInexistente_Sucesso()
+        {
+            try
+            {
+                using var context = GetSqlServerDatabaseContext(Guid.NewGuid().ToString());
+
+                var servico = GetProdutoServicoValidJWT(context);
+
+                var dto = new ProdutoDTO.ProdutoRequest()
+                {
+                    Descricao = "TESTE",
+                    EAN = "123456789",
+                    ValorCompra = 39.90m,
+                    ValorVenda = 89.90m,
+                };
+
+                await servico.AdicionarAsync(dto);
+
+                var dtoInvalido=new ProdutoRequestWithId()
+                {
+                    Descricao = "TESTE",
+                    EAN = "123456789",
+                    ValorCompra = 39.90m,
+                    ValorVenda = 89.90m,
+                    Id=Guid.NewGuid()
+                };
+                Assert.ThrowsExceptionAsync<ApplicationException>(() => servico.AtualizarAsync(dtoInvalido));
             }
             catch (Exception ex)
             {
