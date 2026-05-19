@@ -18,11 +18,21 @@ namespace umfgcloud.loja.dominio.service.Entidades
         public ProdutoEntity(string userId, string userEmail) 
             : base(userId, userEmail) { }
 
-        public void SetDescricao(string descricao) 
-            => Descricao = descricao?.ToUpper() ?? throw new ArgumentNullException(nameof(descricao));
+        public void SetDescricao(string descricao)
+        {
+            if (string.IsNullOrWhiteSpace(descricao))
+            {
+                throw new InvalidDataException(nameof(descricao));
+            }
+            Descricao = descricao.ToUpper();
+        } 
 
         public void SetEAN(string ean)
-            => EAN = ean ?? throw new ArgumentNullException(nameof(ean));
+        {
+            EAN = ean ??  throw new ArgumentNullException(nameof(ean));
+           
+        }
+            
 
         public void SetValorCompra(decimal valorCompra)
         {

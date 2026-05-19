@@ -130,6 +130,37 @@ namespace umfgcloud.aplicacao.service.testes.Classes
             }
         }
 
+        //testes feitos como trabalho
+
+        [TestMethod]
+        [Owner(C_OWNER)]
+        [TestCategory(C_CATEGORY)]
+        public async Task ProdutoServico_AdicionarAsyncComDescricaoSomenteEspacosEmBranco_Falha()
+        {
+            try
+            {
+
+                using var context = GetSqlServerDatabaseContext(Guid.NewGuid().ToString());
+
+                var servico = GetProdutoServicoValidJWT(context);
+                var dto = new ProdutoDTO.ProdutoRequest()
+                {
+                    Descricao = "    ",
+                    EAN = "123456789",
+                    ValorCompra = 39.90m,
+                    ValorVenda = 89.90m,
+                };
+
+                await Assert.ThrowsExceptionAsync<InvalidDataException>(()=>servico.AdicionarAsync(dto));
+            }
+            catch (Exception ex)
+            {
+                Assert.Fail(ex.Message);
+            }
+        }
+
+
+
 
         [TestMethod]
         [Owner(C_OWNER)]
@@ -194,7 +225,7 @@ namespace umfgcloud.aplicacao.service.testes.Classes
         [TestMethod]
         [Owner(C_OWNER)]
         [TestCategory(C_CATEGORY)]
-        public async Task ProdutoServico_AtualizarComIdInexistente_Sucesso()
+        public async Task ProdutoServico_AtualizarComValorCompraNegativo_Falha()
         {
             try
             {
@@ -212,15 +243,52 @@ namespace umfgcloud.aplicacao.service.testes.Classes
 
                 await servico.AdicionarAsync(dto);
 
+                var produtoBd= (await servico.ObterTodosAsync()).FirstOrDefault();
+
                 var dtoInvalido=new ProdutoRequestWithId()
+                {
+                    Descricao = "TESTE",
+                    EAN = "123456789",
+                    ValorCompra = -39.90m,
+                    ValorVenda = 89.90m,
+                    Id=produtoBd.Id
+                };
+                await Assert.ThrowsExceptionAsync<InvalidDataException>(() => servico.AtualizarAsync(dtoInvalido));
+            }
+            catch (Exception ex)
+            {
+                Assert.Fail(ex.Message);
+            }
+        }
+
+        [TestMethod]
+        [Owner(C_OWNER)]
+        [TestCategory(C_CATEGORY)]
+        public async Task ProdutoServico_RemoverPorId_Sucesso()
+        {
+            try
+            {
+                using var context = GetSqlServerDatabaseContext(Guid.NewGuid().ToString());
+
+                var servico = GetProdutoServicoValidJWT(context);
+
+                var dto = new ProdutoDTO.ProdutoRequest()
                 {
                     Descricao = "TESTE",
                     EAN = "123456789",
                     ValorCompra = 39.90m,
                     ValorVenda = 89.90m,
-                    Id=Guid.NewGuid()
                 };
-                Assert.ThrowsExceptionAsync<ApplicationException>(() => servico.AtualizarAsync(dtoInvalido));
+
+                await servico.AdicionarAsync(dto);
+
+                var produtoBd = (await servico.ObterTodosAsync()).FirstOrDefault();
+
+                servico.RemoverAsync(produtoBd.Id);
+
+                var produtos= await servico.ObterTodosAsync();
+
+                Assert.IsTrue(produtos.Count() == 0);
             }
             catch (Exception ex)
             {
