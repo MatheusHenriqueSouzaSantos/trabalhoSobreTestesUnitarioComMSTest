@@ -56,8 +56,6 @@ namespace umfgcloud.aplicacao.service.testes.Classes
         protected static ProdutoServico GetProdutoServicoInvalidJWT(MySqlDataBaseContext context)
             => new(GetHttpContextAccessorInvalidJWT(), GetProdutoRepositorio(context));
 
-        protected static ProdutoServico GetProdutoServicoValidJWT(ProdutoRepositorio repositorio)
-            => new(GetHttpContextAccessorValidJWT(), repositorio);
 
         protected static ProdutoServico GetProdutoServicoValidJWT(MySqlDataBaseContext context)
             => new(GetHttpContextAccessorValidJWT(), GetProdutoRepositorio(context));

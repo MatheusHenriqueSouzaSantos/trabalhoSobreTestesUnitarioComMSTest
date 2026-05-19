@@ -1,9 +1,9 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\facec.lab04\\Desktop\\2026-programacao-iv-api-catalogo-main\\umfgcloud.loja.service\\",
+  "WorkspaceRootPath": "C:\\Users\\facec.lab04\\Desktop\\trabalhoSobreTestesUnitarioComMSTest\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{1BB4DA88-13CE-4418-8915-7FC269BF881F}|umfgcloud.aplicacao.service.testes\\umfgcloud.aplicacao.service.testes.csproj|c:\\users\\facec.lab04\\desktop\\2026-programacao-iv-api-catalogo-main\\umfgcloud.loja.service\\umfgcloud.aplicacao.service.testes\\classes\\produtoservicotestes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{1BB4DA88-13CE-4418-8915-7FC269BF881F}|umfgcloud.aplicacao.service.testes\\umfgcloud.aplicacao.service.testes.csproj|c:\\users\\facec.lab04\\desktop\\trabalhosobretestesunitariocommstest\\umfgcloud.aplicacao.service.testes\\classes\\produtoservicotestes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1BB4DA88-13CE-4418-8915-7FC269BF881F}|umfgcloud.aplicacao.service.testes\\umfgcloud.aplicacao.service.testes.csproj|solutionrelative:umfgcloud.aplicacao.service.testes\\classes\\produtoservicotestes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -20,11 +20,11 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "ProdutoServicoTestes.cs",
-              "DocumentMoniker": "C:\\Users\\facec.lab04\\Desktop\\2026-programacao-iv-api-catalogo-main\\umfgcloud.loja.service\\umfgcloud.aplicacao.service.testes\\Classes\\ProdutoServicoTestes.cs",
+              "DocumentMoniker": "C:\\Users\\facec.lab04\\Desktop\\trabalhoSobreTestesUnitarioComMSTest\\umfgcloud.aplicacao.service.testes\\Classes\\ProdutoServicoTestes.cs",
               "RelativeDocumentMoniker": "umfgcloud.aplicacao.service.testes\\Classes\\ProdutoServicoTestes.cs",
-              "ToolTip": "C:\\Users\\facec.lab04\\Desktop\\2026-programacao-iv-api-catalogo-main\\umfgcloud.loja.service\\umfgcloud.aplicacao.service.testes\\Classes\\ProdutoServicoTestes.cs",
+              "ToolTip": "C:\\Users\\facec.lab04\\Desktop\\trabalhoSobreTestesUnitarioComMSTest\\umfgcloud.aplicacao.service.testes\\Classes\\ProdutoServicoTestes.cs",
               "RelativeToolTip": "umfgcloud.aplicacao.service.testes\\Classes\\ProdutoServicoTestes.cs",
-              "ViewState": "AgIAAH4AAAAAAAAAAAAAAH0AAAAgAAAAAAAAAA==",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAACsAAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-18T23:43:08.081Z",
               "EditorCaption": ""

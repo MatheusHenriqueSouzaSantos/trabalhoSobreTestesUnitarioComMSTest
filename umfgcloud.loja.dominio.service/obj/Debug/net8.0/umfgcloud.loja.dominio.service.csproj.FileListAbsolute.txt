@@ -1,0 +1,13 @@
+C:\Users\facec.lab04\Desktop\trabalhoSobreTestesUnitarioComMSTest\umfgcloud.loja.dominio.service\bin\Debug\net8.0\umfgcloud.loja.dominio.service.deps.json
+C:\Users\facec.lab04\Desktop\trabalhoSobreTestesUnitarioComMSTest\umfgcloud.loja.dominio.service\bin\Debug\net8.0\umfgcloud.loja.dominio.service.dll
+C:\Users\facec.lab04\Desktop\trabalhoSobreTestesUnitarioComMSTest\umfgcloud.loja.dominio.service\bin\Debug\net8.0\umfgcloud.loja.dominio.service.pdb
+C:\Users\facec.lab04\Desktop\trabalhoSobreTestesUnitarioComMSTest\umfgcloud.loja.dominio.service\obj\Debug\net8.0\umfgcloud.loja.dominio.service.csproj.AssemblyReference.cache
+C:\Users\facec.lab04\Desktop\trabalhoSobreTestesUnitarioComMSTest\umfgcloud.loja.dominio.service\obj\Debug\net8.0\umfgcloud.loja.dominio.service.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\facec.lab04\Desktop\trabalhoSobreTestesUnitarioComMSTest\umfgcloud.loja.dominio.service\obj\Debug\net8.0\umfgcloud.loja.dominio.service.AssemblyInfoInputs.cache
+C:\Users\facec.lab04\Desktop\trabalhoSobreTestesUnitarioComMSTest\umfgcloud.loja.dominio.service\obj\Debug\net8.0\umfgcloud.loja.dominio.service.AssemblyInfo.cs
+C:\Users\facec.lab04\Desktop\trabalhoSobreTestesUnitarioComMSTest\umfgcloud.loja.dominio.service\obj\Debug\net8.0\umfgcloud.loja.dominio.service.csproj.CoreCompileInputs.cache
+C:\Users\facec.lab04\Desktop\trabalhoSobreTestesUnitarioComMSTest\umfgcloud.loja.dominio.service\obj\Debug\net8.0\umfgcloud.loja.dominio.service.sourcelink.json
+C:\Users\facec.lab04\Desktop\trabalhoSobreTestesUnitarioComMSTest\umfgcloud.loja.dominio.service\obj\Debug\net8.0\umfgcloud.loja.dominio.service.dll
+C:\Users\facec.lab04\Desktop\trabalhoSobreTestesUnitarioComMSTest\umfgcloud.loja.dominio.service\obj\Debug\net8.0\refint\umfgcloud.loja.dominio.service.dll
+C:\Users\facec.lab04\Desktop\trabalhoSobreTestesUnitarioComMSTest\umfgcloud.loja.dominio.service\obj\Debug\net8.0\umfgcloud.loja.dominio.service.pdb
+C:\Users\facec.lab04\Desktop\trabalhoSobreTestesUnitarioComMSTest\umfgcloud.loja.dominio.service\obj\Debug\net8.0\ref\umfgcloud.loja.dominio.service.dll

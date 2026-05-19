@@ -129,21 +129,61 @@ namespace umfgcloud.aplicacao.service.testes.Classes
             }
         }
 
+
+        [TestMethod]
+        [Owner(C_OWNER)]
+        [TestCategory(C_CATEGORY)]
         public async Task ProdutoServico_BuscarPorId_Sucesso()
         {
             try
             {
-                var mock = new Mock<ProdutoRepositorio>();
+                using var context = GetSqlServerDatabaseContext(Guid.NewGuid().ToString());
 
-                var produto = new loja.dominio.service.Entidades.ProdutoEntity("123","user@email.com");
+                var servico = GetProdutoServicoValidJWT(context);
+                var dto = new ProdutoDTO.ProdutoRequest()
+                {
+                    Descricao = "TESTE",
+                    EAN = "123456789",
+                    ValorCompra = 39.90m,
+                    ValorVenda = 89.90m,
+                };
 
-                mock.Setup(m => m.ObterPorIdAsync(It.IsAny<Guid>())).ReturnsAsync(produto);
+                await servico.AdicionarAsync(dto);
 
-                var servico = GetProdutoServicoValidJWT(mock.Object);
-                
-                var produtoVindoDoService=servico.ObterPorIdAsync(Guid.NewGuid());
+                var produto = (await servico.ObterTodosAsync()).FirstOrDefault();
 
-                Assert.IsNotNull(produtoVindoDoService);
+                produto= await servico.ObterPorIdAsync(produto.Id);
+
+                Assert.IsNotNull(produto);
+            }
+            catch (Exception ex)
+            {
+                Assert.Fail(ex.Message);
+            }
+        }
+        [TestMethod]
+        [Owner(C_OWNER)]
+        [TestCategory(C_CATEGORY)]
+        public async Task ProdutoServico_BuscarTodos_Sucesso()
+        {
+            try
+            {
+                using var context = GetSqlServerDatabaseContext(Guid.NewGuid().ToString());
+
+                var servico = GetProdutoServicoValidJWT(context);
+                var dto = new ProdutoDTO.ProdutoRequest()
+                {
+                    Descricao = "TESTE",
+                    EAN = "123456789",
+                    ValorCompra = 39.90m,
+                    ValorVenda = 89.90m,
+                };
+
+                await servico.AdicionarAsync(dto);
+
+                var produtos = await servico.ObterTodosAsync();
+
+                Assert.IsTrue(produtos.Count() > 0);
             }
             catch (Exception ex)
             {

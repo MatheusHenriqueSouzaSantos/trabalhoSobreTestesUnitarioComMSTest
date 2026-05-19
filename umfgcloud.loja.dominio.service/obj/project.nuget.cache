@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Tbgw8LyhwFU=",
+  "dgSpecHash": "gbM8WnEFY00=",
   "success": true,
-  "projectFilePath": "C:\\Users\\facec.lab04\\Desktop\\2026-programacao-iv-api-catalogo-main\\umfgcloud.loja.service\\umfgcloud.loja.dominio.service\\umfgcloud.loja.dominio.service.csproj",
+  "projectFilePath": "C:\\Users\\facec.lab04\\Desktop\\trabalhoSobreTestesUnitarioComMSTest\\umfgcloud.loja.dominio.service\\umfgcloud.loja.dominio.service.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\facec.lab04\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.0\\microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512",
     "C:\\Users\\facec.lab04\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\8.0.0\\microsoft.extensions.logging.abstractions.8.0.0.nupkg.sha512",
